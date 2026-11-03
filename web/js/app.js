@@ -15,6 +15,7 @@ let qApercu = [0, 0, 0, 0, 0, 0]; // pose affichée hors connexion
 let ws = null;
 
 const vue = new Vue3D($('#vue3d'));
+window.mkx3d = { vue }; // accès pour le débogage depuis la console
 $('#vue3d').addEventListener('modele', (e) => {
   $('#legende-modele').textContent = e.detail === 'blender' ? 'Modèle 3D Blender' : 'Modèle simplifié (bras.glb absent)';
 });

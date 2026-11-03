@@ -40,6 +40,7 @@ export class Vue3D {
     grille.material.transparent = true;
     grille.material.opacity = 0.35;
     this.scene.add(grille);
+    this.grille = grille;
     this.scene.add(new THREE.AxesHelper(0.15));
 
     // Repère de la cible (pose demandée) et de l'outil (pose estimée)
@@ -86,6 +87,11 @@ export class Vue3D {
       this.os = os;
       this.reposOs = os.map((o) => o.quaternion.clone());
       this.scene.add(racine);
+      // La table descend sous le socle : la grille passe au niveau du sol
+      const boite = new THREE.Box3().setFromObject(racine);
+      this.grille.position.z = boite.min.z;
+      this.camera.position.set(1.3, -1.6, 0.9);
+      this.controles.target.set(0, 0, 0.25);
       if (this.simplifie) this.simplifie.visible = false;
       this.modeleCharge = true;
       this.majPose(this.q);

@@ -70,7 +70,11 @@ Le serveur détecte automatiquement quelle version est installée.
 
 ## Modèle 3D
 
-`outils/export_glb.py` exporte l'armature et les pièces du fichier Blender du jumeau numérique vers `web/modele/bras.glb` :
+`web/modele/bras.glb` (15,8 Mo) est exporté depuis `bras_mkx3d-9.blend` du jumeau numérique : armature,
+pièces de chaque segment, socle et table, couleurs d'origine, maillages simplifiés. Ses articulations suivent
+le modèle cinématique à 0,2 mm près.
+
+Pour le régénérer après une modification du fichier Blender :
 
 ```bash
 blender -b chemin/vers/bras_mkx3d-9.blend --python outils/export_glb.py
