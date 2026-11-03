@@ -24,7 +24,7 @@ Secteur 230 V ─ prise C14 (interrupteur + fusible) ─ alimentation Mean Well 
                                    │      │      │       │      │      │
                                  moteur moteur moteur  moteur moteur moteur
 
-PC ── USB ── Arduino Mega ── signaux STEP/DIR ──▶ les 6 drivers
+PC ── USB ── Arduino Mega ── signaux STEP/DIR ──▶ les 7 drivers (épaule ×2)
                          └─ broche 22 ──▶ servomoteur de pince (alimenté en 6 V par le convertisseur)
 ```
 
@@ -33,7 +33,7 @@ PC ── USB ── Arduino Mega ── signaux STEP/DIR ──▶ les 6 driver
 | Axe | Rôle | DIR (broche) | STEP / PUL (broche) |
 |---|---|---|---|
 | 1 | Base | 2 | 3 |
-| 2 | Épaule | 4 | 5 |
+| 2 | Épaule (**2 drivers en parallèle**) | 4 | 5 |
 | 3 | Coude | 6 | 7 |
 | 4 | Avant-bras | 8 | 9 |
 | 5 | Poignet | 10 | 11 |
@@ -51,7 +51,13 @@ Câblage conseillé de chaque TB6600 (montage « cathode commune ») :
 | ENA+ / ENA− | **rien** (le firmware n'utilise pas l'activation : driver toujours actif) |
 
 L'autre montage (« anode commune » : PUL+ et DIR+ au 5 V, PUL− et DIR− aux broches) marche aussi,
-mais il faut le même sur les 6 drivers.
+mais il faut le même sur les 7 drivers.
+
+**Épaule à deux moteurs** : les deux drivers de l'épaule reçoivent les mêmes signaux.
+D4 va au DIR+ des deux drivers, D5 au PUL+ des deux (deux fils dans la même borne, embout double).
+Les deux drivers sont réglés à l'identique. Les moteurs étant montés face à face, l'un des deux
+doit souvent être câblé en sens inverse (A+ ↔ A−) : tester chaque moteur seul, courroie retirée,
+avant de les coupler. S'ils tirent en sens contraire, ils forcent l'un contre l'autre et chauffent.
 
 La broche 13 est aussi la LED de la carte : elle clignote quand l'axe 6 bouge, c'est normal.
 
@@ -62,12 +68,12 @@ La broche 13 est aussi la LED de la carte : elle clignote quand l'axe 6 bouge, c
 
 | Axe | Micro-pas (firmware) | Pas/tour à régler | Moteur (d'après la CAO) | Courant nominal |
 |---|---|---|---|---|
-| 1 | 4 | 800 | NEMA 23 StepperOnline 23HS41-1804S (2,4 N·m) | 1,8 A |
-| 2 | 4 | 800 | 17HS19-1684S-PG5 (réducteur 5:1) | 1,68 A |
-| 3 | 1 | 200 | 17HS15-1684S-PG5 (réducteur 5:1) | 1,68 A |
-| 4 | 2 | 400 | 14HS13-0804S-PG5 (réducteur 5:1) | 0,8 A |
-| 5 | 1 | 200 | 14HS13-0804S | 0,8 A |
-| 6 | 4 | 800 | NEMA 17 (à confirmer) | à lire sur le moteur |
+| 1 | 4 | 800 | à identifier (moteur du socle, plus tard) | à lire sur le moteur |
+| 2 | 4 | 800 | **2 ×** StepperOnline 23HS41-1804S (NEMA 23, 2,4 N·m) | 1,8 A |
+| 3 | 1 | 200 | 17HS19-1684S-PG5 (réducteur 5:1) | 1,68 A |
+| 4 | 2 | 400 | 17HS15-1684S-PG5 (réducteur 5,18:1) | 1,68 A |
+| 5 | 1 | 200 | 14HS13-0804S-PG5 (réducteur 5:1) | 0,8 A |
+| 6 | 4 | 800 | 14HS13-0804S (prise directe) | 0,8 A |
 
 - Le tableau des interrupteurs (SW1 à SW6) est imprimé sur le boîtier du TB6600 :
   il varie selon les modèles, c'est lui qui fait foi.
@@ -79,16 +85,17 @@ avec l'étiquette). À régler **driver hors tension** : les interrupteurs ne so
 
 | Axe | Driver | SW1 | SW2 | SW3 | Pas/tour | SW4 | SW5 | SW6 | Courant |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | J1 | ON | OFF | OFF | 800 (1/4) | ON | ON | OFF | 1,5 A |
-| 2 | J2 | ON | OFF | OFF | 800 (1/4) | ON | ON | OFF | 1,5 A |
-| 3 | J3 | ON | ON | OFF | 200 (1) | ON | ON | OFF | 1,5 A |
-| 4 | J4 | ON | OFF | ON | 400 (1/2) | ON | ON | ON | 0,5 A |
-| 5 | J5 | ON | ON | OFF | 200 (1) | ON | ON | ON | 0,5 A |
-| 6 | J6 | ON | OFF | OFF | 800 (1/4) | selon étiquette du moteur | | | |
+| 1 | base (plus tard) | ON | OFF | OFF | 800 (1/4) | selon étiquette du moteur | | | |
+| 2 | épaule A | ON | OFF | OFF | 800 (1/4) | ON | ON | OFF | 1,5 A |
+| 2 | épaule B | ON | OFF | OFF | 800 (1/4) | ON | ON | OFF | 1,5 A |
+| 3 | coude | ON | ON | OFF | 200 (1) | ON | ON | OFF | 1,5 A |
+| 4 | avant-bras | ON | OFF | ON | 400 (1/2) | ON | ON | OFF | 1,5 A |
+| 5 | poignet | ON | ON | OFF | 200 (1) | ON | ON | ON | 0,5 A |
+| 6 | rotation pince | ON | OFF | OFF | 800 (1/4) | ON | ON | ON | 0,5 A |
 
 Courants des TB6600 (SW4 SW5 SW6) : 0,5 A = ON ON ON · 1,0 A = ON OFF ON · 1,5 A = ON ON OFF ·
 2,0 A = ON OFF OFF · 2,5 A = OFF ON ON · 2,8 A = OFF OFF ON · 3,0 A = OFF ON OFF · 3,5 A = OFF OFF OFF.
-Pour les moteurs 0,8 A (axes 4 et 5), commencer à 0,5 A ; passer à 1,0 A seulement si le couple
+Pour les moteurs 0,8 A (axes 5 et 6), commencer à 0,5 A ; passer à 1,0 A seulement si le couple
 manque, en surveillant l'échauffement du moteur.
 - Certains TB6600 n'ont pas de vrai « pas entier » (1) : si c'est le cas, régler 1/2 et
   passer `MICRO_PAS` à 2 pour cet axe, à la fois dans le firmware et dans `serveur/config.py`.
@@ -125,13 +132,13 @@ Le bouton ARRÊT de l'interface est logiciel : il ne remplace pas un arrêt d'ur
 Le bouton coup-de-poing doit **couper l'alimentation des drivers** (contact NF en série sur le +V).
 
 ```
-Alim +V ──▶ ARU (contact NF) ──▶ bornier de répartition ──▶ VCC des 6 drivers
-Alim −V ───────────────────────────────────────────────▶ GND des 6 drivers (inchangé)
+Alim +V ──▶ ARU (contact NF) ──▶ bornier de répartition ──▶ VCC des 7 drivers
+Alim −V ───────────────────────────────────────────────▶ GND des 7 drivers (inchangé)
 Alim +V ──▶ convertisseur 6 V du servo (non coupé par l'ARU)
 ```
 
 - Utiliser le contact **NF** (normalement fermé), pas le NO : un fil coupé arrête alors aussi les moteurs.
-- Le segment alim → ARU → bornier porte le courant des 6 drivers : fil de 1,5 mm² au moins,
+- Le segment alim → ARU → bornier porte le courant des 7 drivers : fil de 1,5 mm² au moins,
   et contact de l'ARU donné pour 10 A ou plus.
 - Les 3 bornes +V de l'alimentation ne doivent plus aller directement aux drivers.
 

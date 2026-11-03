@@ -10,17 +10,18 @@ from pathlib import Path
 
 SORTIE = Path(__file__).resolve().parent.parent / "docs" / "schema_electrique.svg"
 
-AXES = [
-    # (nom, moteur, micro-pas SW1-3, courant SW4-6)
-    ("Base", "23HS41-1804S · 1,8 A", "ON OFF OFF · 1/4", "ON ON OFF · 1,5 A"),
-    ("Épaule", "17HS19-1684S-PG5", "ON OFF OFF · 1/4", "ON ON OFF · 1,5 A"),
-    ("Coude", "17HS15-1684S-PG5", "ON ON OFF · 1", "ON ON OFF · 1,5 A"),
-    ("Avant-bras", "14HS13-0804S-PG5", "ON OFF ON · 1/2", "ON ON ON · 0,5 A"),
-    ("Poignet", "14HS13-0804S", "ON ON OFF · 1", "ON ON ON · 0,5 A"),
-    ("Rotation pince", "NEMA 17 (à confirmer)", "ON OFF OFF · 1/4", "selon étiquette"),
+DRIVERS = [
+    # (axe, nom, moteur, micro-pas SW1-3, courant SW4-6, à faire plus tard)
+    (1, "Base", "à identifier", "ON OFF OFF · 1/4", "selon étiquette", True),
+    (2, "Épaule A", "23HS41-1804S · 1,8 A", "ON OFF OFF · 1/4", "ON ON OFF · 1,5 A", False),
+    (2, "Épaule B", "23HS41-1804S · 1,8 A", "ON OFF OFF · 1/4", "ON ON OFF · 1,5 A", False),
+    (3, "Coude", "17HS19-1684S-PG5", "ON ON OFF · 1", "ON ON OFF · 1,5 A", False),
+    (4, "Avant-bras", "17HS15-1684S-PG5", "ON OFF ON · 1/2", "ON ON OFF · 1,5 A", False),
+    (5, "Poignet", "14HS13-0804S-PG5", "ON ON OFF · 1", "ON ON ON · 0,5 A", False),
+    (6, "Rotation pince", "14HS13-0804S", "ON OFF OFF · 1/4", "ON ON ON · 0,5 A", False),
 ]
 
-L, H = 1700, 1270
+L, H = 1700, 1480
 ROUGE, NOIR, BLEU_SIG = "#d62828", "#1b1b1b", "#1f5fbf"
 PHASE, NEUTRE, TERRE = "#8b4513", "#1f6fd6", "#3a9a3a"
 FIL_MOTEUR = {"A+": "#1b1b1b", "A−": "#2a9d3a", "B+": "#d62828", "B−": "#1f6fd6"}
@@ -82,7 +83,7 @@ def non_connecte(x, y):
 
 # ------------------------------------------------------------------ titre
 texte(40, 42, "Bras MKX3D — Schéma électrique", 24, gras=True)
-texte(40, 66, "Arduino Mega 2560 · 6 drivers TB6600 · alimentation 12 V · firmware V2_010 / V2_011", 13.5,
+texte(40, 66, "Arduino Mega 2560 · 7 drivers TB6600 (épaule ×2) · alimentation 12 V · firmware V2_010 / V2_011", 13.5,
       couleur="#4a5568")
 
 # ------------------------------------------------------------------ secteur et C14
@@ -133,11 +134,11 @@ ligne([(600, y_pv + 3), (600, y_pv - 34)], "#555", 1.4, True)
 el.append(f'<path d="M 580 {y_pv - 34} A 20 14 0 0 1 620 {y_pv - 34} Z" fill="{ROUGE}" stroke="#7a1010" stroke-width="1.4"/>')
 texte(600, y_pv - 54, "ARU", 13, "middle", True, ROUGE)
 texte(600, y_pv + 32, "contact NF · ≥ 10 A", 10.5, "middle", couleur="#4a5568")
-ligne([(cx2 + 4, y_pv), (X_12, y_pv), (X_12, 205 + 5 * 165 + 18)], ROUGE, 3)
+ligne([(cx2 + 4, y_pv), (X_12, y_pv), (X_12, 205 + 6 * 165 + 18)], ROUGE, 3)
 texte(X_12 + 6, y_pv - 8, "+12 V moteurs", 12, gras=True, couleur=ROUGE)
 texte(X_12 + 6, y_pv + 8, "(coupé par l'ARU)", 10.5, couleur=ROUGE)
 # −V -> bus 0 V
-ligne([(ax + 190, y_mv), (X_0V, y_mv), (X_0V, 205 + 5 * 165 + 36)], NOIR, 3)
+ligne([(ax + 190, y_mv), (X_0V, y_mv), (X_0V, 205 + 6 * 165 + 36)], NOIR, 3)
 point(*noeud_mv)
 texte(X_0V - 6, y_mv - 8, "0 V", 12, "end", True)
 
@@ -190,12 +191,12 @@ texte(x22 + 8, 975, "signal", 10.5, couleur="#7a4fbf")
 dx, dl, dh, pas = 1040, 260, 150, 165
 y0 = 205
 OFFS = {"VCC": 18, "GND": 36, "DIR+": 60, "PUL+": 78, "DIR−": 96, "PUL−": 114, "ENA+": 130, "ENA−": 144}
-cibles = []
-for i, (nom, moteur, micro, courant) in enumerate(AXES):
+cibles = {}  # axe -> liste de (y DIR+, y PUL+)
+for i, (axe, nom, moteur, micro, courant, plus_tard) in enumerate(DRIVERS):
     y = y0 + i * pas
-    boite(dx, y, dl, dh, fond="#f6f8fb")
-    texte(dx + 140, y + 22, f"J{i + 1} — TB6600", 14, "middle", True)
-    texte(dx + 140, y + 40, f"Axe {i + 1} · {nom}", 12, "middle", couleur="#4a5568")
+    boite(dx, y, dl, dh, fond="#f3f3f3" if plus_tard else "#f6f8fb", pointille=plus_tard)
+    texte(dx + 140, y + 22, f"Axe {axe} — {nom}", 14, "middle", True)
+    texte(dx + 140, y + 40, "TB6600" + (" · plus tard" if plus_tard else ""), 12, "middle", couleur="#4a5568")
     texte(dx + 140, y + 70, "SW1-3 (micro-pas)", 10, "middle", couleur="#4a5568")
     texte(dx + 140, y + 84, micro, 11.5, "middle", True)
     texte(dx + 140, y + 106, "SW4-6 (courant)", 10, "middle", couleur="#4a5568")
@@ -214,7 +215,7 @@ for i, (nom, moteur, micro, courant) in enumerate(AXES):
     masse(xm, y + OFFS["PUL−"], etiquette=False)
     non_connecte(dx, y + OFFS["ENA+"])
     non_connecte(dx, y + OFFS["ENA−"])
-    cibles += [y + OFFS["DIR+"], y + OFFS["PUL+"]]
+    cibles.setdefault(axe, []).append((y + OFFS["DIR+"], y + OFFS["PUL+"]))
     # moteur
     mx, my, r = 1495, y + 75, 36
     for j, (b, o) in enumerate((("A+", 42), ("A−", 62), ("B+", 92), ("B−", 112))):
@@ -222,23 +223,36 @@ for i, (nom, moteur, micro, courant) in enumerate(AXES):
         borne(dx + dl, yb, b, "droite")
         ey = my - 27 + j * 18
         ex = mx - math.sqrt(r * r - (ey - my) ** 2)
-        ligne([(dx + dl, yb), (1385, yb), (1415, ey), (ex, ey)], FIL_MOTEUR[b], 2.4)
-    el.append(f'<circle cx="{mx}" cy="{my}" r="{r}" fill="#fff" stroke="#1b2230" stroke-width="2"/>')
-    texte(mx, my + 6, f"M{i + 1}", 17, "middle", True)
-    texte(mx + r + 12, my - 4, f"Axe {i + 1}", 12.5, gras=True)
+        ligne([(dx + dl, yb), (1385, yb), (1415, ey), (ex, ey)], FIL_MOTEUR[b], 2.4, plus_tard)
+    dash = ' stroke-dasharray="7 5"' if plus_tard else ""
+    el.append(f'<circle cx="{mx}" cy="{my}" r="{r}" fill="#fff" stroke="#1b2230" stroke-width="2"{dash}/>')
+    texte(mx, my + 6, "M", 17, "middle", True)
+    texte(mx + r + 12, my - 4, f"Axe {axe}" + (" (A)" if nom.endswith(" A") else " (B)" if nom.endswith(" B") else ""), 12.5, gras=True)
     texte(mx + r + 12, my + 12, moteur, 10.5, couleur="#4a5568")
 
-# fils de commande Arduino -> drivers (lanes sans croisement)
-for k, (yp, yt) in enumerate(zip(broches, cibles)):
-    if yt < yp:
-        xl = 690 + 20 * k        # fils qui montent : couloirs de gauche à droite
+# fils de commande Arduino -> drivers ; l'épaule (axe 2) commande 2 drivers en parallèle
+for k, yp in enumerate(broches):
+    axe = k // 2 + 1
+    ys = [c[k % 2] for c in cibles[axe]]
+    if max(ys) < yp:
+        xl = 690 + 20 * k           # fils qui montent
+    elif min(ys) > yp:
+        xl = 920 - 20 * (k - 4)     # fils qui descendent
     else:
-        xl = 920 - 20 * (k - 6)  # fils qui descendent : couloirs de droite à gauche
-    ligne([(gx + gl, yp), (xl, yp), (xl, yt), (dx, yt)], BLEU_SIG, 1.8)
+        xl = 730 + 20 * (k - 2)     # épaule : un driver au-dessus, un en dessous
+    haut, bas = min(ys + [yp]), max(ys + [yp])
+    ligne([(gx + gl, yp), (xl, yp)], BLEU_SIG, 1.8)
+    ligne([(xl, haut), (xl, bas)], BLEU_SIG, 1.8)
+    for yt in ys:
+        ligne([(xl, yt), (dx, yt)], BLEU_SIG, 1.8)
+        if haut < yt < bas:
+            point(xl, yt, BLEU_SIG)
+    if haut < yp < bas:
+        point(xl, yp, BLEU_SIG)
 
 # ------------------------------------------------------------------ légende et notes
-lx, ly = 40, 1110
-el.append(f'<rect x="{lx}" y="{ly}" width="900" height="140" rx="6" fill="#fff" stroke="#c9d0da"/>')
+lx, ly = 40, 1300
+el.append(f'<rect x="{lx}" y="{ly}" width="900" height="155" rx="6" fill="#fff" stroke="#c9d0da"/>')
 texte(lx + 14, ly + 22, "Légende et règles", 13, gras=True)
 items = [
     (ROUGE, "+12 V moteurs (après ARU)"), (NOIR, "0 V commun"), (BLEU_SIG, "signaux STEP / DIR"),
@@ -253,6 +267,7 @@ notes = [
     "• Arduino alimenté uniquement par l'USB du PC (jack débranché). Masses communes ; aucun fil vers le +5 V de l'Arduino.",
     "• ENA+ / ENA− non connectés : drivers toujours actifs. DIR−/PUL− pontés au 0 V (montage cathode commune).",
     "• Micro-pas identique au firmware (axes 1 à 6 : 4, 4, 1, 2, 1, 4). Interrupteurs réglés hors tension.",
+    "• Épaule : 2 drivers en parallèle sur D4/D5, réglés à l'identique ; inverser A+/A− d'un des 2 moteurs s'ils tirent en sens contraire.",
     "• Après un arrêt d'urgence, recalibrer la position dans l'interface (onglet Calibration).",
 ]
 for n, t in enumerate(notes):
