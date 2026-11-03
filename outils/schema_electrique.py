@@ -12,7 +12,7 @@ SORTIE = Path(__file__).resolve().parent.parent / "docs" / "schema_electrique.sv
 
 AXES = [
     # (nom, moteur, micro-pas SW1-3, courant SW4-6)
-    ("Base", "NEMA 23 · 102 mm", "ON OFF OFF · 1/4", "selon étiquette"),
+    ("Base", "23HS41-1804S · 1,8 A", "ON OFF OFF · 1/4", "ON ON OFF · 1,5 A"),
     ("Épaule", "17HS19-1684S-PG5", "ON OFF OFF · 1/4", "ON ON OFF · 1,5 A"),
     ("Coude", "17HS15-1684S-PG5", "ON ON OFF · 1", "ON ON OFF · 1,5 A"),
     ("Avant-bras", "14HS13-0804S-PG5", "ON OFF ON · 1/2", "ON ON ON · 0,5 A"),

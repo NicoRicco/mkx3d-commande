@@ -62,7 +62,7 @@ La broche 13 est aussi la LED de la carte : elle clignote quand l'axe 6 bouge, c
 
 | Axe | Micro-pas (firmware) | Pas/tour à régler | Moteur (d'après la CAO) | Courant nominal |
 |---|---|---|---|---|
-| 1 | 4 | 800 | NEMA 23, 102 mm | à lire sur le moteur |
+| 1 | 4 | 800 | NEMA 23 StepperOnline 23HS41-1804S (2,4 N·m) | 1,8 A |
 | 2 | 4 | 800 | 17HS19-1684S-PG5 (réducteur 5:1) | 1,68 A |
 | 3 | 1 | 200 | 17HS15-1684S-PG5 (réducteur 5:1) | 1,68 A |
 | 4 | 2 | 400 | 14HS13-0804S-PG5 (réducteur 5:1) | 0,8 A |
@@ -79,7 +79,7 @@ avec l'étiquette). À régler **driver hors tension** : les interrupteurs ne so
 
 | Axe | Driver | SW1 | SW2 | SW3 | Pas/tour | SW4 | SW5 | SW6 | Courant |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | J1 | ON | OFF | OFF | 800 (1/4) | selon étiquette du NEMA 23 | | | |
+| 1 | J1 | ON | OFF | OFF | 800 (1/4) | ON | ON | OFF | 1,5 A |
 | 2 | J2 | ON | OFF | OFF | 800 (1/4) | ON | ON | OFF | 1,5 A |
 | 3 | J3 | ON | ON | OFF | 200 (1) | ON | ON | OFF | 1,5 A |
 | 4 | J4 | ON | OFF | ON | 400 (1/2) | ON | ON | ON | 0,5 A |
