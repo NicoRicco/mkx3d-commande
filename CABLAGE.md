@@ -10,7 +10,7 @@ Les points marqués **à confirmer** doivent être vérifiés sur le matériel r
 ## 1. Vue d'ensemble
 
 ```
-Secteur 230 V ─ prise C14 (interrupteur + fusible) ─ alimentation 24 V (à confirmer)
+Secteur 230 V ─ prise C14 (interrupteur + fusible) ─ alimentation Mean Well LRS-350-12 (12 V)
                                                           │
                                          arrêt d'urgence (coupe le +12 V des drivers)
                                                           │
