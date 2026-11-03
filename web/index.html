@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MKX3D Commande</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.js", "three/addons/": "./vendor/three/addons/" } }
+  </script>
+</head>
+<body>
+  <header class="barre">
+    <div class="titre">
+      <strong>MKX3D</strong><span>Commande du bras</span>
+    </div>
+    <div class="connexion">
+      <span id="pastille" class="pastille" title="État de la liaison"></span>
+      <span id="etat-texte">Serveur…</span>
+      <select id="ports" aria-label="Port série"></select>
+      <button id="rafraichir" class="discret" title="Rechercher les ports">↻</button>
+      <button id="bouton-connexion">Connecter</button>
+    </div>
+    <button id="arret" class="arret" title="Arrêt immédiat (touche Échap)">ARRÊT</button>
+  </header>
+
+  <div id="bandeau-calibration" class="bandeau" hidden>
+    <div>
+      <strong>Position non calibrée.</strong>
+      L'Arduino a redémarré et croit que tous les axes sont à 0°. Sans fins de course, indique-lui où se trouve vraiment le bras.
+    </div>
+    <div class="actions">
+      <button id="calib-zero">Le bras est en position zéro</button>
+      <button id="calib-derniere" class="secondaire" hidden>Reprendre la dernière position connue</button>
+      <button id="calib-ouvrir" class="secondaire">Autre position…</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="vue">
+      <div id="vue3d"></div>
+      <div class="infos-vue">
+        <div class="pose" id="pose"></div>
+        <div class="mouvement" id="mouvement"></div>
+      </div>
+      <div class="legende" id="legende-modele"></div>
+    </section>
+
+    <aside class="panneau">
+      <nav class="onglets" role="tablist">
+        <button role="tab" data-onglet="articulaire" aria-selected="true">Axes</button>
+        <button role="tab" data-onglet="cartesien">Cartésien</button>
+        <button role="tab" data-onglet="trajectoire">Trajectoire</button>
+        <button role="tab" data-onglet="calibration">Calibration</button>
+        <button role="tab" data-onglet="journal">Journal</button>
+      </nav>
+
+      <!-- Axes -->
+      <section class="onglet" id="onglet-articulaire">
+        <div class="ligne-options">
+          <label>Pas
+            <select id="pas-axe">
+              <option value="0.5">0,5°</option><option value="1">1°</option>
+              <option value="5" selected>5°</option><option value="10">10°</option>
+            </select>
+          </label>
+          <label class="case"><input type="checkbox" id="envoi-direct" checked> Envoi direct</label>
+        </div>
+        <div id="axes"></div>
+        <div class="ligne-boutons">
+          <button id="envoyer-axes">Envoyer</button>
+          <button id="axes-zero" class="secondaire">Tout à 0°</button>
+          <button id="axes-reprendre" class="secondaire" title="Recopier la position actuelle">Position actuelle</button>
+        </div>
+        <label class="duree">Durée imposée <input type="number" id="duree-axes" min="0" step="0.5" placeholder="auto"> s</label>
+        <div class="bloc-pince">
+          <div class="entete-axe"><span>Pince</span><output id="pince-val">0 %</output></div>
+          <input type="range" id="pince" min="0" max="100" step="1" value="0">
+          <div class="ligne-boutons">
+            <button class="secondaire" id="pince-fermer">Fermer</button>
+            <button class="secondaire" id="pince-ouvrir">Ouvrir</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cartésien -->
+      <section class="onglet" id="onglet-cartesien" hidden>
+        <p class="aide">Déplace l'extrémité de la pince. Les angles sont calculés par le modèle géométrique inverse (MGI).</p>
+        <div class="ligne-options">
+          <label>Pas
+            <select id="pas-lin">
+              <option value="1">1 mm</option><option value="5">5 mm</option>
+              <option value="10" selected>10 mm</option><option value="25">25 mm</option>
+            </select>
+          </label>
+          <label>Rotation
+            <select id="pas-rot">
+              <option value="1">1°</option><option value="5" selected>5°</option><option value="15">15°</option>
+            </select>
+          </label>
+          <label class="case"><input type="checkbox" id="garder-orientation" checked> Garder l'orientation</label>
+        </div>
+        <div id="cartesien" class="grille-cart"></div>
+        <div class="ligne-boutons">
+          <button id="aller-cart">Aller à cette pose</button>
+        </div>
+        <div id="mgi-message" class="message"></div>
+      </section>
+
+      <!-- Trajectoire -->
+      <section class="onglet" id="onglet-trajectoire" hidden>
+        <div class="ligne-boutons">
+          <button id="traj-ajouter">+ Ajouter la position actuelle</button>
+        </div>
+        <ol id="traj-liste" class="traj-liste"></ol>
+        <div class="ligne-boutons">
+          <button id="traj-lire">▶ Lire</button>
+          <label class="case"><input type="checkbox" id="traj-boucle"> En boucle</label>
+          <button id="traj-stop" class="secondaire">■ Arrêter</button>
+        </div>
+        <div id="traj-progression" class="message"></div>
+        <h3>Fichiers</h3>
+        <div class="ligne-boutons">
+          <input id="traj-nom" placeholder="Nom de la trajectoire" maxlength="60">
+          <button id="traj-enregistrer" class="secondaire">Enregistrer</button>
+        </div>
+        <ul id="traj-fichiers" class="fichiers"></ul>
+        <div class="ligne-boutons">
+          <button id="traj-exporter" class="discret">Exporter (.json)</button>
+          <label class="discret bouton-fichier">Importer (.json / .csv)<input type="file" id="traj-importer" accept=".json,.csv" hidden></label>
+          <button id="traj-vider" class="discret">Vider</button>
+        </div>
+      </section>
+
+      <!-- Calibration -->
+      <section class="onglet" id="onglet-calibration" hidden>
+        <p class="aide">
+          Les moteurs n'ont ni encodeur ni fin de course : l'Arduino compte les pas depuis son démarrage.
+          À chaque connexion il redémarre et croit être à 0° partout. Saisis ici la position réelle du bras
+          (commande <code>F</code>) sans faire bouger les moteurs.
+        </p>
+        <div id="calib-axes" class="grille-calib"></div>
+        <div class="ligne-boutons">
+          <button id="calib-appliquer">Définir comme position actuelle</button>
+          <button id="calib-remplir-derniere" class="secondaire">Dernière position connue</button>
+        </div>
+        <p class="aide" id="firmware-info"></p>
+      </section>
+
+      <!-- Journal -->
+      <section class="onglet" id="onglet-journal" hidden>
+        <div id="journal" class="journal" aria-live="polite"></div>
+      </section>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

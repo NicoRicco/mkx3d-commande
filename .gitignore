@@ -1,0 +1,4 @@
+__pycache__/
+derniere_position.json
+trajectoires/*.json
+!trajectoires/exemple.json
