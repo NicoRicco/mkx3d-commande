@@ -56,6 +56,10 @@ Options utiles :
    Sinon, saisir ses angles dans l'onglet **Calibration**, ou reprendre la dernière position connue.
 3. Tester un petit mouvement (pas de 1° ou 5°) sur chaque axe et vérifier **le sens de rotation** par rapport à la vue 3D.
 
+## Câblage
+
+Voir [CABLAGE.md](CABLAGE.md) et le [schéma électrique](docs/schema_electrique.pdf).
+
 ## Firmware
 
 L'interface fonctionne avec le firmware d'origine `FirmwareArduinoV2_010.ino`.

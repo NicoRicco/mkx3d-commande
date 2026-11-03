@@ -1,5 +1,9 @@
 # Câblage du bras MKX3D
 
+**Schéma électrique complet :** [docs/schema_electrique.pdf](docs/schema_electrique.pdf) (A3, à imprimer)
+
+![Schéma électrique](docs/schema_electrique.png)
+
 Plan établi à partir du firmware `FirmwareArduinoV2_010.ino` et des pièces du modèle CAO
 (drivers TB6600, Arduino Mega, alimentation, arrêt d'urgence, interrupteur C14 avec fusible).
 Les points marqués **à confirmer** doivent être vérifiés sur le matériel réel.

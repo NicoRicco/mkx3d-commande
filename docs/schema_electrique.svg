@@ -1,0 +1,474 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1270" width="1700" height="1270" font-family="DejaVu Sans, Segoe UI, Arial, sans-serif">
+<rect width="1700" height="1270" fill="#ffffff"/>
+<text x="40" y="42" font-size="24" text-anchor="start" fill="#1b2230" font-weight="700">Bras MKX3D — Schéma électrique</text>
+<text x="40" y="66" font-size="13.5" text-anchor="start" fill="#4a5568">Arduino Mega 2560 · 6 drivers TB6600 · alimentation 12 V · firmware V2_010 / V2_011</text>
+<text x="40" y="245" font-size="12.5" text-anchor="start" fill="#1b2230" font-weight="700">Secteur 230 V~</text>
+<text x="40" y="144" font-size="12" text-anchor="start" fill="#8b4513" font-weight="700">L</text>
+<text x="40" y="169" font-size="12" text-anchor="start" fill="#1f6fd6" font-weight="700">N</text>
+<text x="40" y="194" font-size="12" text-anchor="start" fill="#3a9a3a" font-weight="700">PE</text>
+<rect x="80" y="105" width="150" height="115" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="155" y="98" font-size="13" text-anchor="middle" fill="#1b2230" font-weight="700">Embase C14</text>
+<text x="155" y="213" font-size="10.5" text-anchor="middle" fill="#4a5568">interrupteur + fusible</text>
+<polyline points="60,140 100,140" fill="none" stroke="#8b4513" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="100" y="134" width="30" height="12" fill="#fff" stroke="#8b4513" stroke-width="2"/>
+<text x="115" y="130" font-size="10" text-anchor="middle" fill="#8b4513">F</text>
+<polyline points="130,140 160,140" fill="none" stroke="#8b4513" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="160,140 186,130" fill="none" stroke="#8b4513" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="190,140 250,140" fill="none" stroke="#8b4513" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="60,165 160,165" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="160,165 186,155" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="190,165 250,165" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="173,136 173,161" fill="none" stroke="#888" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<polyline points="60,190 250,190" fill="none" stroke="#3a9a3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="60,190 250,190" fill="none" stroke="#e0c020" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<rect x="250" y="100" width="190" height="130" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="345.0" y="120" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">Mean Well LRS-350-12</text>
+<text x="345.0" y="137" font-size="12" text-anchor="middle" fill="#4a5568">12 V ⎓ · 29 A</text>
+<circle cx="250" cy="140" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="258" y="144" font-size="11.5" text-anchor="start" fill="#1b2230">L</text>
+<circle cx="250" cy="165" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="258" y="169" font-size="11.5" text-anchor="start" fill="#1b2230">N</text>
+<circle cx="250" cy="190" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="258" y="194" font-size="11.5" text-anchor="start" fill="#1b2230">⏚</text>
+<circle cx="440" cy="150" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="432" y="154" font-size="11.5" text-anchor="end" fill="#1b2230">+V</text>
+<circle cx="440" cy="200" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="432" y="204" font-size="11.5" text-anchor="end" fill="#1b2230">−V</text>
+<polyline points="440,150 560,150" fill="none" stroke="#d62828" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="480" cy="150" r="4" fill="#d62828"/>
+<circle cx="560" cy="150" r="3.5" fill="#fff" stroke="#d62828" stroke-width="2"/>
+<circle cx="640" cy="150" r="3.5" fill="#fff" stroke="#d62828" stroke-width="2"/>
+<polyline points="564,150 634,157" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="636,148 636,160" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="600,153 600,116" fill="none" stroke="#555" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<path d="M 580 116 A 20 14 0 0 1 620 116 Z" fill="#d62828" stroke="#7a1010" stroke-width="1.4"/>
+<text x="600" y="96" font-size="13" text-anchor="middle" fill="#d62828" font-weight="700">ARU</text>
+<text x="600" y="182" font-size="10.5" text-anchor="middle" fill="#4a5568">contact NF · ≥ 10 A</text>
+<polyline points="644,150 992,150 992,1048" fill="none" stroke="#d62828" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="998" y="142" font-size="12" text-anchor="start" fill="#d62828" font-weight="700">+12 V moteurs</text>
+<text x="998" y="158" font-size="10.5" text-anchor="start" fill="#d62828">(coupé par l'ARU)</text>
+<polyline points="440,200 960,200 960,1066" fill="none" stroke="#1b1b1b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="510" cy="200" r="4" fill="#1b1b1b"/>
+<text x="954" y="192" font-size="12" text-anchor="end" fill="#1b2230" font-weight="700">0 V</text>
+<rect x="260" y="300" width="190" height="100" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="355.0" y="320" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">Convertisseur LM2596</text>
+<text x="355.0" y="337" font-size="12" text-anchor="middle" fill="#4a5568">réglé à 9 V</text>
+<circle cx="450" cy="345" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="442" y="349" font-size="11.5" text-anchor="end" fill="#1b2230">IN+</text>
+<circle cx="450" cy="378" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="442" y="382" font-size="11.5" text-anchor="end" fill="#1b2230">IN−</text>
+<circle cx="260" cy="345" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="268" y="349" font-size="11.5" text-anchor="start" fill="#1b2230">OUT+</text>
+<circle cx="260" cy="378" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="268" y="382" font-size="11.5" text-anchor="start" fill="#1b2230">OUT−</text>
+<polyline points="480,150 480,345 450,345" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="510,200 510,378 450,378" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="520" y="300" font-size="10.5" text-anchor="start" fill="#4a5568">non coupé par l'ARU :</text>
+<text x="520" y="314" font-size="10.5" text-anchor="start" fill="#4a5568">l'Arduino reste alimenté</text>
+<rect x="420" y="470" width="220" height="470" rx="6" fill="#eef6ee" stroke="#1b2230" stroke-width="1.6"/>
+<text x="530.0" y="490" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">Arduino Mega 2560</text>
+<text x="530.0" y="507" font-size="12" text-anchor="middle" fill="#4a5568">+ shield bornier à vis</text>
+<circle cx="640" cy="510" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="514" font-size="11.5" text-anchor="end" fill="#1b2230">D2</text>
+<circle cx="640" cy="532" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="536" font-size="11.5" text-anchor="end" fill="#1b2230">D3</text>
+<circle cx="640" cy="554" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="558" font-size="11.5" text-anchor="end" fill="#1b2230">D4</text>
+<circle cx="640" cy="576" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="580" font-size="11.5" text-anchor="end" fill="#1b2230">D5</text>
+<circle cx="640" cy="598" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="602" font-size="11.5" text-anchor="end" fill="#1b2230">D6</text>
+<circle cx="640" cy="620" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="624" font-size="11.5" text-anchor="end" fill="#1b2230">D7</text>
+<circle cx="640" cy="642" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="646" font-size="11.5" text-anchor="end" fill="#1b2230">D8</text>
+<circle cx="640" cy="664" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="668" font-size="11.5" text-anchor="end" fill="#1b2230">D9</text>
+<circle cx="640" cy="686" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="690" font-size="11.5" text-anchor="end" fill="#1b2230">D10</text>
+<circle cx="640" cy="708" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="712" font-size="11.5" text-anchor="end" fill="#1b2230">D11</text>
+<circle cx="640" cy="730" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="734" font-size="11.5" text-anchor="end" fill="#1b2230">D12</text>
+<circle cx="640" cy="752" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="756" font-size="11.5" text-anchor="end" fill="#1b2230">D13</text>
+<circle cx="640" cy="790" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="632" y="794" font-size="11.5" text-anchor="end" fill="#1b2230">GND</text>
+<polyline points="640,790 660,790" fill="none" stroke="#1b1b1b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="660,790 660,800" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="651,800 669,800" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="654,804 666,804" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="657,808 663,808" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="672" y="812" font-size="10.5" text-anchor="start" fill="#4a5568">0 V</text>
+<circle cx="420" cy="560" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="428" y="564" font-size="11.5" text-anchor="start" fill="#1b2230">Jack +</text>
+<circle cx="420" cy="590" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="428" y="594" font-size="11.5" text-anchor="start" fill="#1b2230">Jack −</text>
+<circle cx="420" cy="820" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="428" y="824" font-size="11.5" text-anchor="start" fill="#1b2230">USB</text>
+<polyline points="260,345 232,345 232,560 420,560" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="260,378 214,378 214,590 420,590" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="300" y="552" font-size="11" text-anchor="start" fill="#d62828" font-weight="700">9 V</text>
+<rect x="110" y="790" width="200" height="60" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="210.0" y="810" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">PC</text>
+<text x="210.0" y="827" font-size="12" text-anchor="middle" fill="#4a5568">serveur mkx3d-commande</text>
+<polyline points="310,820 420,820" fill="none" stroke="#555" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="378" y="814" font-size="10.5" text-anchor="middle" fill="#4a5568">USB · 9600 bauds</text>
+<circle cx="530" cy="940" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="530" y="932" font-size="11.5" text-anchor="middle" fill="#1b2230">D22</text>
+<polyline points="530,940 530,1000" fill="none" stroke="#7a4fbf" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<rect x="450" y="1000" width="160" height="70" rx="6" fill="#f7f2fd" stroke="#1b2230" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="530.0" y="1020" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">Servo de pince</text>
+<text x="530.0" y="1037" font-size="12" text-anchor="middle" fill="#4a5568">à venir</text>
+<text x="530" y="1088" font-size="10.5" text-anchor="middle" fill="#7a4fbf">alim. 5–6 V séparée (pas le 5 V Arduino)</text>
+<text x="538" y="975" font-size="10.5" text-anchor="start" fill="#7a4fbf">signal</text>
+<rect x="1040" y="205" width="260" height="150" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="1180" y="227" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">J1 — TB6600</text>
+<text x="1180" y="245" font-size="12" text-anchor="middle" fill="#4a5568">Axe 1 · Base</text>
+<text x="1180" y="275" font-size="10" text-anchor="middle" fill="#4a5568">SW1-3 (micro-pas)</text>
+<text x="1180" y="289" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON OFF OFF · 1/4</text>
+<text x="1180" y="311" font-size="10" text-anchor="middle" fill="#4a5568">SW4-6 (courant)</text>
+<text x="1180" y="325" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">selon étiquette</text>
+<circle cx="1040" cy="223" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="227" font-size="11.5" text-anchor="start" fill="#1b2230">VCC</text>
+<circle cx="1040" cy="241" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="245" font-size="11.5" text-anchor="start" fill="#1b2230">GND</text>
+<circle cx="1040" cy="265" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="269" font-size="11.5" text-anchor="start" fill="#1b2230">DIR+</text>
+<circle cx="1040" cy="283" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="287" font-size="11.5" text-anchor="start" fill="#1b2230">PUL+</text>
+<circle cx="1040" cy="301" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="305" font-size="11.5" text-anchor="start" fill="#1b2230">DIR−</text>
+<circle cx="1040" cy="319" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="323" font-size="11.5" text-anchor="start" fill="#1b2230">PUL−</text>
+<circle cx="1040" cy="335" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="339" font-size="11.5" text-anchor="start" fill="#1b2230">ENA+</text>
+<circle cx="1040" cy="349" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="353" font-size="11.5" text-anchor="start" fill="#1b2230">ENA−</text>
+<polyline points="992,223 1040,223" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="992" cy="223" r="4" fill="#d62828"/>
+<polyline points="960,241 1040,241" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="960" cy="241" r="4" fill="#1b1b1b"/>
+<polyline points="1040,301 1018,301 1018,319 1040,319" fill="none" stroke="#1b1b1b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1018" cy="319" r="4" fill="#1b1b1b"/>
+<polyline points="1018,319 1018,329" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1009,329 1027,329" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1012,333 1024,333" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1015,337 1021,337" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,330 1045,340" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,340 1045,330" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,344 1045,354" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,354 1045,344" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="247" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="251" font-size="11.5" text-anchor="end" fill="#1b2230">A+</text>
+<polyline points="1300,247 1385,247 1415,253 1471.1882382004187,253" fill="none" stroke="#1b1b1b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="267" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="271" font-size="11.5" text-anchor="end" fill="#1b2230">A−</text>
+<polyline points="1300,267 1385,267 1415,271 1460.1431498841332,271" fill="none" stroke="#2a9d3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="297" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="301" font-size="11.5" text-anchor="end" fill="#1b2230">B+</text>
+<polyline points="1300,297 1385,297 1415,289 1460.1431498841332,289" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="317" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="321" font-size="11.5" text-anchor="end" fill="#1b2230">B−</text>
+<polyline points="1300,317 1385,317 1415,307 1471.1882382004187,307" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1495" cy="280" r="36" fill="#fff" stroke="#1b2230" stroke-width="2"/>
+<text x="1495" y="286" font-size="17" text-anchor="middle" fill="#1b2230" font-weight="700">M1</text>
+<text x="1543" y="276" font-size="12.5" text-anchor="start" fill="#1b2230" font-weight="700">Axe 1</text>
+<text x="1543" y="292" font-size="10.5" text-anchor="start" fill="#4a5568">NEMA 23 · 102 mm</text>
+<rect x="1040" y="370" width="260" height="150" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="1180" y="392" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">J2 — TB6600</text>
+<text x="1180" y="410" font-size="12" text-anchor="middle" fill="#4a5568">Axe 2 · Épaule</text>
+<text x="1180" y="440" font-size="10" text-anchor="middle" fill="#4a5568">SW1-3 (micro-pas)</text>
+<text x="1180" y="454" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON OFF OFF · 1/4</text>
+<text x="1180" y="476" font-size="10" text-anchor="middle" fill="#4a5568">SW4-6 (courant)</text>
+<text x="1180" y="490" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON ON OFF · 1,5 A</text>
+<circle cx="1040" cy="388" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="392" font-size="11.5" text-anchor="start" fill="#1b2230">VCC</text>
+<circle cx="1040" cy="406" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="410" font-size="11.5" text-anchor="start" fill="#1b2230">GND</text>
+<circle cx="1040" cy="430" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="434" font-size="11.5" text-anchor="start" fill="#1b2230">DIR+</text>
+<circle cx="1040" cy="448" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="452" font-size="11.5" text-anchor="start" fill="#1b2230">PUL+</text>
+<circle cx="1040" cy="466" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="470" font-size="11.5" text-anchor="start" fill="#1b2230">DIR−</text>
+<circle cx="1040" cy="484" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="488" font-size="11.5" text-anchor="start" fill="#1b2230">PUL−</text>
+<circle cx="1040" cy="500" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="504" font-size="11.5" text-anchor="start" fill="#1b2230">ENA+</text>
+<circle cx="1040" cy="514" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="518" font-size="11.5" text-anchor="start" fill="#1b2230">ENA−</text>
+<polyline points="992,388 1040,388" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="992" cy="388" r="4" fill="#d62828"/>
+<polyline points="960,406 1040,406" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="960" cy="406" r="4" fill="#1b1b1b"/>
+<polyline points="1040,466 1018,466 1018,484 1040,484" fill="none" stroke="#1b1b1b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1018" cy="484" r="4" fill="#1b1b1b"/>
+<polyline points="1018,484 1018,494" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1009,494 1027,494" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1012,498 1024,498" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1015,502 1021,502" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,495 1045,505" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,505 1045,495" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,509 1045,519" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,519 1045,509" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="412" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="416" font-size="11.5" text-anchor="end" fill="#1b2230">A+</text>
+<polyline points="1300,412 1385,412 1415,418 1471.1882382004187,418" fill="none" stroke="#1b1b1b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="432" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="436" font-size="11.5" text-anchor="end" fill="#1b2230">A−</text>
+<polyline points="1300,432 1385,432 1415,436 1460.1431498841332,436" fill="none" stroke="#2a9d3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="462" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="466" font-size="11.5" text-anchor="end" fill="#1b2230">B+</text>
+<polyline points="1300,462 1385,462 1415,454 1460.1431498841332,454" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="482" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="486" font-size="11.5" text-anchor="end" fill="#1b2230">B−</text>
+<polyline points="1300,482 1385,482 1415,472 1471.1882382004187,472" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1495" cy="445" r="36" fill="#fff" stroke="#1b2230" stroke-width="2"/>
+<text x="1495" y="451" font-size="17" text-anchor="middle" fill="#1b2230" font-weight="700">M2</text>
+<text x="1543" y="441" font-size="12.5" text-anchor="start" fill="#1b2230" font-weight="700">Axe 2</text>
+<text x="1543" y="457" font-size="10.5" text-anchor="start" fill="#4a5568">17HS19-1684S-PG5</text>
+<rect x="1040" y="535" width="260" height="150" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="1180" y="557" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">J3 — TB6600</text>
+<text x="1180" y="575" font-size="12" text-anchor="middle" fill="#4a5568">Axe 3 · Coude</text>
+<text x="1180" y="605" font-size="10" text-anchor="middle" fill="#4a5568">SW1-3 (micro-pas)</text>
+<text x="1180" y="619" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON ON OFF · 1</text>
+<text x="1180" y="641" font-size="10" text-anchor="middle" fill="#4a5568">SW4-6 (courant)</text>
+<text x="1180" y="655" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON ON OFF · 1,5 A</text>
+<circle cx="1040" cy="553" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="557" font-size="11.5" text-anchor="start" fill="#1b2230">VCC</text>
+<circle cx="1040" cy="571" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="575" font-size="11.5" text-anchor="start" fill="#1b2230">GND</text>
+<circle cx="1040" cy="595" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="599" font-size="11.5" text-anchor="start" fill="#1b2230">DIR+</text>
+<circle cx="1040" cy="613" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="617" font-size="11.5" text-anchor="start" fill="#1b2230">PUL+</text>
+<circle cx="1040" cy="631" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="635" font-size="11.5" text-anchor="start" fill="#1b2230">DIR−</text>
+<circle cx="1040" cy="649" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="653" font-size="11.5" text-anchor="start" fill="#1b2230">PUL−</text>
+<circle cx="1040" cy="665" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="669" font-size="11.5" text-anchor="start" fill="#1b2230">ENA+</text>
+<circle cx="1040" cy="679" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="683" font-size="11.5" text-anchor="start" fill="#1b2230">ENA−</text>
+<polyline points="992,553 1040,553" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="992" cy="553" r="4" fill="#d62828"/>
+<polyline points="960,571 1040,571" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="960" cy="571" r="4" fill="#1b1b1b"/>
+<polyline points="1040,631 1018,631 1018,649 1040,649" fill="none" stroke="#1b1b1b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1018" cy="649" r="4" fill="#1b1b1b"/>
+<polyline points="1018,649 1018,659" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1009,659 1027,659" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1012,663 1024,663" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1015,667 1021,667" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,660 1045,670" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,670 1045,660" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,674 1045,684" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,684 1045,674" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="577" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="581" font-size="11.5" text-anchor="end" fill="#1b2230">A+</text>
+<polyline points="1300,577 1385,577 1415,583 1471.1882382004187,583" fill="none" stroke="#1b1b1b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="597" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="601" font-size="11.5" text-anchor="end" fill="#1b2230">A−</text>
+<polyline points="1300,597 1385,597 1415,601 1460.1431498841332,601" fill="none" stroke="#2a9d3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="627" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="631" font-size="11.5" text-anchor="end" fill="#1b2230">B+</text>
+<polyline points="1300,627 1385,627 1415,619 1460.1431498841332,619" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="647" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="651" font-size="11.5" text-anchor="end" fill="#1b2230">B−</text>
+<polyline points="1300,647 1385,647 1415,637 1471.1882382004187,637" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1495" cy="610" r="36" fill="#fff" stroke="#1b2230" stroke-width="2"/>
+<text x="1495" y="616" font-size="17" text-anchor="middle" fill="#1b2230" font-weight="700">M3</text>
+<text x="1543" y="606" font-size="12.5" text-anchor="start" fill="#1b2230" font-weight="700">Axe 3</text>
+<text x="1543" y="622" font-size="10.5" text-anchor="start" fill="#4a5568">17HS15-1684S-PG5</text>
+<rect x="1040" y="700" width="260" height="150" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="1180" y="722" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">J4 — TB6600</text>
+<text x="1180" y="740" font-size="12" text-anchor="middle" fill="#4a5568">Axe 4 · Avant-bras</text>
+<text x="1180" y="770" font-size="10" text-anchor="middle" fill="#4a5568">SW1-3 (micro-pas)</text>
+<text x="1180" y="784" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON OFF ON · 1/2</text>
+<text x="1180" y="806" font-size="10" text-anchor="middle" fill="#4a5568">SW4-6 (courant)</text>
+<text x="1180" y="820" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON ON ON · 0,5 A</text>
+<circle cx="1040" cy="718" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="722" font-size="11.5" text-anchor="start" fill="#1b2230">VCC</text>
+<circle cx="1040" cy="736" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="740" font-size="11.5" text-anchor="start" fill="#1b2230">GND</text>
+<circle cx="1040" cy="760" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="764" font-size="11.5" text-anchor="start" fill="#1b2230">DIR+</text>
+<circle cx="1040" cy="778" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="782" font-size="11.5" text-anchor="start" fill="#1b2230">PUL+</text>
+<circle cx="1040" cy="796" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="800" font-size="11.5" text-anchor="start" fill="#1b2230">DIR−</text>
+<circle cx="1040" cy="814" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="818" font-size="11.5" text-anchor="start" fill="#1b2230">PUL−</text>
+<circle cx="1040" cy="830" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="834" font-size="11.5" text-anchor="start" fill="#1b2230">ENA+</text>
+<circle cx="1040" cy="844" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="848" font-size="11.5" text-anchor="start" fill="#1b2230">ENA−</text>
+<polyline points="992,718 1040,718" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="992" cy="718" r="4" fill="#d62828"/>
+<polyline points="960,736 1040,736" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="960" cy="736" r="4" fill="#1b1b1b"/>
+<polyline points="1040,796 1018,796 1018,814 1040,814" fill="none" stroke="#1b1b1b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1018" cy="814" r="4" fill="#1b1b1b"/>
+<polyline points="1018,814 1018,824" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1009,824 1027,824" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1012,828 1024,828" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1015,832 1021,832" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,825 1045,835" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,835 1045,825" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,839 1045,849" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,849 1045,839" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="742" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="746" font-size="11.5" text-anchor="end" fill="#1b2230">A+</text>
+<polyline points="1300,742 1385,742 1415,748 1471.1882382004187,748" fill="none" stroke="#1b1b1b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="762" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="766" font-size="11.5" text-anchor="end" fill="#1b2230">A−</text>
+<polyline points="1300,762 1385,762 1415,766 1460.1431498841332,766" fill="none" stroke="#2a9d3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="792" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="796" font-size="11.5" text-anchor="end" fill="#1b2230">B+</text>
+<polyline points="1300,792 1385,792 1415,784 1460.1431498841332,784" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="812" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="816" font-size="11.5" text-anchor="end" fill="#1b2230">B−</text>
+<polyline points="1300,812 1385,812 1415,802 1471.1882382004187,802" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1495" cy="775" r="36" fill="#fff" stroke="#1b2230" stroke-width="2"/>
+<text x="1495" y="781" font-size="17" text-anchor="middle" fill="#1b2230" font-weight="700">M4</text>
+<text x="1543" y="771" font-size="12.5" text-anchor="start" fill="#1b2230" font-weight="700">Axe 4</text>
+<text x="1543" y="787" font-size="10.5" text-anchor="start" fill="#4a5568">14HS13-0804S-PG5</text>
+<rect x="1040" y="865" width="260" height="150" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="1180" y="887" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">J5 — TB6600</text>
+<text x="1180" y="905" font-size="12" text-anchor="middle" fill="#4a5568">Axe 5 · Poignet</text>
+<text x="1180" y="935" font-size="10" text-anchor="middle" fill="#4a5568">SW1-3 (micro-pas)</text>
+<text x="1180" y="949" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON ON OFF · 1</text>
+<text x="1180" y="971" font-size="10" text-anchor="middle" fill="#4a5568">SW4-6 (courant)</text>
+<text x="1180" y="985" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON ON ON · 0,5 A</text>
+<circle cx="1040" cy="883" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="887" font-size="11.5" text-anchor="start" fill="#1b2230">VCC</text>
+<circle cx="1040" cy="901" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="905" font-size="11.5" text-anchor="start" fill="#1b2230">GND</text>
+<circle cx="1040" cy="925" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="929" font-size="11.5" text-anchor="start" fill="#1b2230">DIR+</text>
+<circle cx="1040" cy="943" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="947" font-size="11.5" text-anchor="start" fill="#1b2230">PUL+</text>
+<circle cx="1040" cy="961" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="965" font-size="11.5" text-anchor="start" fill="#1b2230">DIR−</text>
+<circle cx="1040" cy="979" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="983" font-size="11.5" text-anchor="start" fill="#1b2230">PUL−</text>
+<circle cx="1040" cy="995" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="999" font-size="11.5" text-anchor="start" fill="#1b2230">ENA+</text>
+<circle cx="1040" cy="1009" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1013" font-size="11.5" text-anchor="start" fill="#1b2230">ENA−</text>
+<polyline points="992,883 1040,883" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="992" cy="883" r="4" fill="#d62828"/>
+<polyline points="960,901 1040,901" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="960" cy="901" r="4" fill="#1b1b1b"/>
+<polyline points="1040,961 1018,961 1018,979 1040,979" fill="none" stroke="#1b1b1b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1018" cy="979" r="4" fill="#1b1b1b"/>
+<polyline points="1018,979 1018,989" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1009,989 1027,989" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1012,993 1024,993" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1015,997 1021,997" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,990 1045,1000" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,1000 1045,990" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,1004 1045,1014" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,1014 1045,1004" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="907" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="911" font-size="11.5" text-anchor="end" fill="#1b2230">A+</text>
+<polyline points="1300,907 1385,907 1415,913 1471.1882382004187,913" fill="none" stroke="#1b1b1b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="927" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="931" font-size="11.5" text-anchor="end" fill="#1b2230">A−</text>
+<polyline points="1300,927 1385,927 1415,931 1460.1431498841332,931" fill="none" stroke="#2a9d3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="957" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="961" font-size="11.5" text-anchor="end" fill="#1b2230">B+</text>
+<polyline points="1300,957 1385,957 1415,949 1460.1431498841332,949" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="977" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="981" font-size="11.5" text-anchor="end" fill="#1b2230">B−</text>
+<polyline points="1300,977 1385,977 1415,967 1471.1882382004187,967" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1495" cy="940" r="36" fill="#fff" stroke="#1b2230" stroke-width="2"/>
+<text x="1495" y="946" font-size="17" text-anchor="middle" fill="#1b2230" font-weight="700">M5</text>
+<text x="1543" y="936" font-size="12.5" text-anchor="start" fill="#1b2230" font-weight="700">Axe 5</text>
+<text x="1543" y="952" font-size="10.5" text-anchor="start" fill="#4a5568">14HS13-0804S</text>
+<rect x="1040" y="1030" width="260" height="150" rx="6" fill="#f6f8fb" stroke="#1b2230" stroke-width="1.6"/>
+<text x="1180" y="1052" font-size="14" text-anchor="middle" fill="#1b2230" font-weight="700">J6 — TB6600</text>
+<text x="1180" y="1070" font-size="12" text-anchor="middle" fill="#4a5568">Axe 6 · Rotation pince</text>
+<text x="1180" y="1100" font-size="10" text-anchor="middle" fill="#4a5568">SW1-3 (micro-pas)</text>
+<text x="1180" y="1114" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">ON OFF OFF · 1/4</text>
+<text x="1180" y="1136" font-size="10" text-anchor="middle" fill="#4a5568">SW4-6 (courant)</text>
+<text x="1180" y="1150" font-size="11.5" text-anchor="middle" fill="#1b2230" font-weight="700">selon étiquette</text>
+<circle cx="1040" cy="1048" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1052" font-size="11.5" text-anchor="start" fill="#1b2230">VCC</text>
+<circle cx="1040" cy="1066" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1070" font-size="11.5" text-anchor="start" fill="#1b2230">GND</text>
+<circle cx="1040" cy="1090" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1094" font-size="11.5" text-anchor="start" fill="#1b2230">DIR+</text>
+<circle cx="1040" cy="1108" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1112" font-size="11.5" text-anchor="start" fill="#1b2230">PUL+</text>
+<circle cx="1040" cy="1126" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1130" font-size="11.5" text-anchor="start" fill="#1b2230">DIR−</text>
+<circle cx="1040" cy="1144" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1148" font-size="11.5" text-anchor="start" fill="#1b2230">PUL−</text>
+<circle cx="1040" cy="1160" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1164" font-size="11.5" text-anchor="start" fill="#1b2230">ENA+</text>
+<circle cx="1040" cy="1174" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1048" y="1178" font-size="11.5" text-anchor="start" fill="#1b2230">ENA−</text>
+<polyline points="992,1048 1040,1048" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="992" cy="1048" r="4" fill="#d62828"/>
+<polyline points="960,1066 1040,1066" fill="none" stroke="#1b1b1b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="960" cy="1066" r="4" fill="#1b1b1b"/>
+<polyline points="1040,1126 1018,1126 1018,1144 1040,1144" fill="none" stroke="#1b1b1b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1018" cy="1144" r="4" fill="#1b1b1b"/>
+<polyline points="1018,1144 1018,1154" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1009,1154 1027,1154" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1012,1158 1024,1158" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1015,1162 1021,1162" fill="none" stroke="#1b1b1b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,1155 1045,1165" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,1165 1045,1155" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,1169 1045,1179" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1035,1179 1045,1169" fill="none" stroke="#888" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="1072" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="1076" font-size="11.5" text-anchor="end" fill="#1b2230">A+</text>
+<polyline points="1300,1072 1385,1072 1415,1078 1471.1882382004187,1078" fill="none" stroke="#1b1b1b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="1092" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="1096" font-size="11.5" text-anchor="end" fill="#1b2230">A−</text>
+<polyline points="1300,1092 1385,1092 1415,1096 1460.1431498841332,1096" fill="none" stroke="#2a9d3a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="1122" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="1126" font-size="11.5" text-anchor="end" fill="#1b2230">B+</text>
+<polyline points="1300,1122 1385,1122 1415,1114 1460.1431498841332,1114" fill="none" stroke="#d62828" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1300" cy="1142" r="3.2" fill="#fff" stroke="#1b2230" stroke-width="1.4"/>
+<text x="1292" y="1146" font-size="11.5" text-anchor="end" fill="#1b2230">B−</text>
+<polyline points="1300,1142 1385,1142 1415,1132 1471.1882382004187,1132" fill="none" stroke="#1f6fd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1495" cy="1105" r="36" fill="#fff" stroke="#1b2230" stroke-width="2"/>
+<text x="1495" y="1111" font-size="17" text-anchor="middle" fill="#1b2230" font-weight="700">M6</text>
+<text x="1543" y="1101" font-size="12.5" text-anchor="start" fill="#1b2230" font-weight="700">Axe 6</text>
+<text x="1543" y="1117" font-size="10.5" text-anchor="start" fill="#4a5568">NEMA 17 (à confirmer)</text>
+<polyline points="640,510 690,510 690,265 1040,265" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,532 710,532 710,283 1040,283" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,554 730,554 730,430 1040,430" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,576 750,576 750,448 1040,448" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,598 770,598 770,595 1040,595" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,620 790,620 790,613 1040,613" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,642 920,642 920,760 1040,760" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,664 900,664 900,778 1040,778" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,686 880,686 880,925 1040,925" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,708 860,708 860,943 1040,943" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,730 840,730 840,1090 1040,1090" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="640,752 820,752 820,1108 1040,1108" fill="none" stroke="#1f5fbf" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="40" y="1110" width="900" height="140" rx="6" fill="#fff" stroke="#c9d0da"/>
+<text x="54" y="1132" font-size="13" text-anchor="start" fill="#1b2230" font-weight="700">Légende et règles</text>
+<polyline points="54,1150 82,1150" fill="none" stroke="#d62828" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="90" y="1154" font-size="11.5" text-anchor="start" fill="#1b2230">+12 V moteurs (après ARU)</text>
+<polyline points="264,1150 292,1150" fill="none" stroke="#1b1b1b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="300" y="1154" font-size="11.5" text-anchor="start" fill="#1b2230">0 V commun</text>
+<polyline points="474,1150 502,1150" fill="none" stroke="#1f5fbf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="510" y="1154" font-size="11.5" text-anchor="start" fill="#1b2230">signaux STEP / DIR</text>
+<polyline points="54,1170 82,1170" fill="none" stroke="#8b4513" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="90" y="1174" font-size="11.5" text-anchor="start" fill="#1b2230">phase 230 V</text>
+<polyline points="264,1170 292,1170" fill="none" stroke="#1f6fd6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="300" y="1174" font-size="11.5" text-anchor="start" fill="#1b2230">neutre</text>
+<polyline points="474,1170 502,1170" fill="none" stroke="#7a4fbf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<text x="510" y="1174" font-size="11.5" text-anchor="start" fill="#1b2230">à venir</text>
+<text x="54" y="1198" font-size="11" text-anchor="start" fill="#1b2230">• Toutes les masses sont communes (le convertisseur LM2596 n'est pas isolé) ; aucun fil vers le +5 V de l'Arduino.</text>
+<text x="54" y="1213" font-size="11" text-anchor="start" fill="#1b2230">• ENA+ / ENA− non connectés : drivers toujours actifs. DIR−/PUL− pontés au 0 V (montage cathode commune).</text>
+<text x="54" y="1228" font-size="11" text-anchor="start" fill="#1b2230">• Micro-pas identique au firmware (axes 1 à 6 : 4, 4, 1, 2, 1, 4). Interrupteurs réglés hors tension.</text>
+<text x="54" y="1243" font-size="11" text-anchor="start" fill="#1b2230">• Après un arrêt d'urgence, recalibrer la position dans l'interface (onglet Calibration).</text>
+<text x="1660" y="1248" font-size="10.5" text-anchor="end" fill="#8a94a6" font-style="italic">Projet mkx3d-commande · généré par outils/schema_electrique.py</text>
+</svg>
