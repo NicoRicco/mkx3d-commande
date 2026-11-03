@@ -143,15 +143,15 @@ texte(X_0V - 6, y_mv - 8, "0 V", 12, "end", True)
 
 # ------------------------------------------------------------------ convertisseur (Arduino)
 bx, by = 290, 300
-boite(bx - 30, by, 190, 100, "Convertisseur LM2596", "réglé à 9 V")
+boite(bx - 30, by, 190, 100, "Convertisseur LM2596", "réglé à 6 V")
 borne(bx + 160, 345, "IN+", "droite")
 borne(bx + 160, 378, "IN−", "droite")
 borne(bx - 30, 345, "OUT+", "gauche")
 borne(bx - 30, 378, "OUT−", "gauche")
 ligne([noeud_pv, (480, 345), (bx + 160, 345)], ROUGE, 2.2)
 ligne([noeud_mv, (510, 378), (bx + 160, 378)], NOIR, 2.2)
-texte(520, 300, "non coupé par l'ARU :", 10.5, couleur="#4a5568")
-texte(520, 314, "l'Arduino reste alimenté", 10.5, couleur="#4a5568")
+texte(520, 300, "alimente le servo de pince ;", 10.5, couleur="#4a5568")
+texte(520, 314, "non coupé par l'ARU", 10.5, couleur="#4a5568")
 
 # ------------------------------------------------------------------ Arduino
 gx, gy, gl, gh = 420, 470, 220, 470
@@ -166,22 +166,24 @@ borne(gx + gl, y_gnd_ard, "GND", "droite")
 ligne([(gx + gl, y_gnd_ard), (gx + gl + 20, y_gnd_ard)], NOIR, 2)
 masse(gx + gl + 20, y_gnd_ard)
 # alimentation jack + USB
-y_vin_p, y_vin_m, y_usb = 560, 590, 820
-borne(gx, y_vin_p, "Jack +", "gauche")
-borne(gx, y_vin_m, "Jack −", "gauche")
+y_usb = 820
 borne(gx, y_usb, "USB", "gauche")
-ligne([(bx - 30, 345), (232, 345), (232, y_vin_p), (gx, y_vin_p)], ROUGE, 2.2)
-ligne([(bx - 30, 378), (214, 378), (214, y_vin_m), (gx, y_vin_m)], NOIR, 2.2)
-texte(300, 552, "9 V", 11, gras=True, couleur=ROUGE)
-boite(110, 790, 200, 60, "PC", "serveur mkx3d-commande")
-ligne([(310, y_usb), (gx, y_usb)], "#555", 2.4)
-texte(378, y_usb - 6, "USB · 9600 bauds", 10.5, "middle", couleur="#4a5568")
+texte(gx + 10, 600, "Jack : non branché", 11, couleur="#4a5568", italique=True)
+texte(gx + 10, 615, "(alimenté par l'USB)", 11, couleur="#4a5568", italique=True)
+# sortie 6 V du convertisseur -> servo de pince
+ligne([(bx - 30, 345), (232, 345), (232, 440), (380, 440), (380, 1052), (450, 1052)], ROUGE, 2.2)
+ligne([(bx - 30, 378), (214, 378), (214, 455), (395, 455), (395, 1072), (450, 1072)], NOIR, 2.2)
+texte(240, 434, "6 V servo", 11, gras=True, couleur=ROUGE)
+boite(40, 790, 190, 60, "PC", "serveur mkx3d-commande")
+ligne([(230, y_usb), (gx, y_usb)], "#555", 2.4)
+texte(325, y_usb - 6, "USB : alim. + données", 10.5, "middle", couleur="#4a5568")
 # broche 22 -> servo (à venir)
 x22 = 530
 borne(x22, gy + gh, "D22", "bas")
 ligne([(x22, gy + gh), (x22, 1000)], "#7a4fbf", 2, True)
-boite(450, 1000, 160, 70, "Servo de pince", "à venir", "#f7f2fd", True)
-texte(530, 1088, "alim. 5–6 V séparée (pas le 5 V Arduino)", 10.5, "middle", couleur="#7a4fbf")
+boite(450, 1000, 160, 88, "Servo de pince", "à venir", "#f7f2fd", True)
+borne(450, 1052, "+6 V", "gauche")
+borne(450, 1072, "GND", "gauche")
 texte(x22 + 8, 975, "signal", 10.5, couleur="#7a4fbf")
 
 # ------------------------------------------------------------------ drivers et moteurs
@@ -248,7 +250,7 @@ for n, (c, t) in enumerate(items):
     ligne([(x, y - 4), (x + 28, y - 4)], c, 3, c == "#7a4fbf")
     texte(x + 36, y, t, 11.5)
 notes = [
-    "• Toutes les masses sont communes (le convertisseur LM2596 n'est pas isolé) ; aucun fil vers le +5 V de l'Arduino.",
+    "• Arduino alimenté uniquement par l'USB du PC (jack débranché). Masses communes ; aucun fil vers le +5 V de l'Arduino.",
     "• ENA+ / ENA− non connectés : drivers toujours actifs. DIR−/PUL− pontés au 0 V (montage cathode commune).",
     "• Micro-pas identique au firmware (axes 1 à 6 : 4, 4, 1, 2, 1, 4). Interrupteurs réglés hors tension.",
     "• Après un arrêt d'urgence, recalibrer la position dans l'interface (onglet Calibration).",

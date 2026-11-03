@@ -25,7 +25,7 @@ Secteur 230 V ─ prise C14 (interrupteur + fusible) ─ alimentation Mean Well 
                                  moteur moteur moteur  moteur moteur moteur
 
 PC ── USB ── Arduino Mega ── signaux STEP/DIR ──▶ les 6 drivers
-                         └─ broche 22 ──▶ servomoteur de pince (alimenté en 5–6 V séparé)
+                         └─ broche 22 ──▶ servomoteur de pince (alimenté en 6 V par le convertisseur)
 ```
 
 ## 2. Arduino Mega → drivers TB6600
@@ -110,9 +110,12 @@ Chaque moteur a 2 bobines (4 fils) : A+ / A− sur une bobine, B+ / B− sur l'a
 
 - Drivers : VCC / GND du TB6600 sur l'alimentation (9 à 42 V ; le montage utilise 12 V).
   Fils de section suffisante (≥ 0,75 mm² pour l'arrivée commune).
-- Arduino : alimenté par l'USB du PC (suffisant pour les signaux).
+- Arduino : alimenté **uniquement par l'USB du PC** (suffisant pour les signaux).
+  Le jack d'alimentation de l'Arduino reste **débranché** : il lui faudrait au moins 7 V.
+- Convertisseur LM2596 : entrée sur le 12 V (avant l'ARU), sortie réglée à **6 V**,
+  réservée au servo de pince (+6 V et GND du servo ; signal sur la broche 22).
 - Servo de pince : **ne pas l'alimenter par le 5 V de l'Arduino** (appels de courant qui
-  font redémarrer la carte). Utiliser un régulateur 5–6 V séparé.
+  font redémarrer la carte).
 - **Masses communes** : le GND de l'Arduino, du servo et (en cathode commune) des entrées
   PUL−/DIR− doivent être reliés.
 
@@ -124,7 +127,7 @@ Le bouton coup-de-poing doit **couper l'alimentation des drivers** (contact NF e
 ```
 Alim +V ──▶ ARU (contact NF) ──▶ bornier de répartition ──▶ VCC des 6 drivers
 Alim −V ───────────────────────────────────────────────▶ GND des 6 drivers (inchangé)
-Alim +V ──▶ convertisseur de tension (non coupé par l'ARU)
+Alim +V ──▶ convertisseur 6 V du servo (non coupé par l'ARU)
 ```
 
 - Utiliser le contact **NF** (normalement fermé), pas le NO : un fil coupé arrête alors aussi les moteurs.
