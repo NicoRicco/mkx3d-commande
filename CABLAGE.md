@@ -12,7 +12,7 @@ Les points marqués **à confirmer** doivent être vérifiés sur le matériel r
 ```
 Secteur 230 V ─ prise C14 (interrupteur + fusible) ─ alimentation 24 V (à confirmer)
                                                           │
-                                         arrêt d'urgence (coupe le +24 V des drivers)
+                                         arrêt d'urgence (coupe le +12 V des drivers)
                                                           │
                                    ┌──────┬──────┬────────┼──────┬──────┬──────┐
                                  TB6600 TB6600 TB6600  TB6600 TB6600 TB6600
@@ -67,6 +67,25 @@ La broche 13 est aussi la LED de la carte : elle clignote quand l'axe 6 bouge, c
 
 - Le tableau des interrupteurs (SW1 à SW6) est imprimé sur le boîtier du TB6600 :
   il varie selon les modèles, c'est lui qui fait foi.
+
+### Positions pour les drivers « Microstep Driver 9–42 VDC » du montage
+
+SW1-SW3 règlent le micro-pas, SW4-SW6 le courant (tableau standard des TB6600, à comparer
+avec l'étiquette). À régler **driver hors tension** : les interrupteurs ne sont lus qu'à la mise sous tension.
+
+| Axe | Driver | SW1 | SW2 | SW3 | Pas/tour | SW4 | SW5 | SW6 | Courant |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | J1 | ON | OFF | OFF | 800 (1/4) | selon étiquette du NEMA 23 | | | |
+| 2 | J2 | ON | OFF | OFF | 800 (1/4) | ON | ON | OFF | 1,5 A |
+| 3 | J3 | ON | ON | OFF | 200 (1) | ON | ON | OFF | 1,5 A |
+| 4 | J4 | ON | OFF | ON | 400 (1/2) | ON | ON | ON | 0,5 A |
+| 5 | J5 | ON | ON | OFF | 200 (1) | ON | ON | ON | 0,5 A |
+| 6 | J6 | ON | OFF | OFF | 800 (1/4) | selon étiquette du moteur | | | |
+
+Courants des TB6600 (SW4 SW5 SW6) : 0,5 A = ON ON ON · 1,0 A = ON OFF ON · 1,5 A = ON ON OFF ·
+2,0 A = ON OFF OFF · 2,5 A = OFF ON ON · 2,8 A = OFF OFF ON · 3,0 A = OFF ON OFF · 3,5 A = OFF OFF OFF.
+Pour les moteurs 0,8 A (axes 4 et 5), commencer à 0,5 A ; passer à 1,0 A seulement si le couple
+manque, en surveillant l'échauffement du moteur.
 - Certains TB6600 n'ont pas de vrai « pas entier » (1) : si c'est le cas, régler 1/2 et
   passer `MICRO_PAS` à 2 pour cet axe, à la fois dans le firmware et dans `serveur/config.py`.
 - Courant : choisir le réglage **égal ou juste en dessous** du courant nominal du moteur
@@ -85,7 +104,7 @@ Chaque moteur a 2 bobines (4 fils) : A+ / A− sur une bobine, B+ / B− sur l'a
 
 ## 5. Alimentations
 
-- Drivers : VCC / GND du TB6600 sur l'alimentation (9 à 42 V selon le modèle, 24 V conseillé).
+- Drivers : VCC / GND du TB6600 sur l'alimentation (9 à 42 V ; le montage utilise 12 V).
   Fils de section suffisante (≥ 0,75 mm² pour l'arrivée commune).
 - Arduino : alimenté par l'USB du PC (suffisant pour les signaux).
 - Servo de pince : **ne pas l'alimenter par le 5 V de l'Arduino** (appels de courant qui
@@ -96,7 +115,18 @@ Chaque moteur a 2 bobines (4 fils) : A+ / A− sur une bobine, B+ / B− sur l'a
 ## 6. Arrêt d'urgence
 
 Le bouton ARRÊT de l'interface est logiciel : il ne remplace pas un arrêt d'urgence physique.
-Le bouton coup-de-poing doit **couper l'alimentation des drivers** (contact NF en série sur le +24 V).
+Le bouton coup-de-poing doit **couper l'alimentation des drivers** (contact NF en série sur le +V).
+
+```
+Alim +V ──▶ ARU (contact NF) ──▶ bornier de répartition ──▶ VCC des 6 drivers
+Alim −V ───────────────────────────────────────────────▶ GND des 6 drivers (inchangé)
+Alim +V ──▶ convertisseur de tension (non coupé par l'ARU)
+```
+
+- Utiliser le contact **NF** (normalement fermé), pas le NO : un fil coupé arrête alors aussi les moteurs.
+- Le segment alim → ARU → bornier porte le courant des 6 drivers : fil de 1,5 mm² au moins,
+  et contact de l'ARU donné pour 10 A ou plus.
+- Les 3 bornes +V de l'alimentation ne doivent plus aller directement aux drivers.
 
 Conséquence : après un arrêt d'urgence physique, les moteurs ne sont plus maintenus et l'Arduino
 ne sait plus où est le bras. Il faut le recalibrer (onglet Calibration) avant de repartir.
