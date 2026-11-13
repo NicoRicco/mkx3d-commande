@@ -125,3 +125,33 @@ directement la recherche sur joybuy.fr. Comparer avec les prix de référence ci
 | Tige filetée M6 | [tige filetée M6](https://www.joybuy.fr/s?keyword=tige%20filet%C3%A9e%20M6) |
 | Embouts de câblage + pince | [embouts de câblage pince à sertir](https://www.joybuy.fr/s?keyword=embouts%20de%20c%C3%A2blage%20pince%20%C3%A0%20sertir) |
 | Câble 4 × 0,5 mm² | [câble 4x0.5mm2](https://www.joybuy.fr/s?keyword=c%C3%A2ble%204x0.5mm2) |
+
+## Version Amazon.fr
+
+Fiches Amazon.fr trouvées pour chaque pièce (prix relevés quand ils étaient visibles ; ils changent souvent).
+Sur Amazon, les moteurs StepperOnline coûtent en général **plus cher** que sur le site StepperOnline
+(ex. NEMA 14 : 23 € contre 8,48 $) ; le reste est comparable.
+
+| Qté | Pièce | Fiche Amazon.fr | Remarque |
+|---|---|---|---|
+| 2 | NEMA 23 23HS41-1804S | [STEPPERONLINE 2,4 N·m 1,8 A](https://amazon.fr/Moteur-Pas-CNC-Nema-23/dp/B00PNEPKH6) | référence exacte |
+| 1 | NEMA 17 17HS19-1684S-PG5 (coude) | [STEPPERONLINE L=48 mm 5:1](https://www.amazon.fr/STEPPERONLINE-Moteur-pas-%C3%A0-pas-Nema-transmission/dp/B07R299RL6) | vérifier « 5.18:1 » |
+| 1 | NEMA 17 17HS15-1684S-PG5 (avant-bras) | [STEPPERONLINE 5:1 L=38 mm](https://www.amazon.fr/STEPPERONLINE-engrenage-plan%C3%A9taire-p%C3%A9dalage-Diam%C3%A8tre/dp/B00WATUFIG) | ≈ 45,69 € |
+| 1 | NEMA 14 14HS13-0804S-PG5 (poignet) | non trouvé | commander chez StepperOnline / Oyostepper |
+| 1 | NEMA 14 14HS13-0804S (rotation pince) | [STEPPERONLINE 18 Ncm 0,8 A](https://www.amazon.fr/STEPPERONLINE-Bipolaire-35x35x34mm-Imprimante-Machine/dp/B077XSG86T) | ≈ 23 € |
+| 7 | Driver TB6600 | [lot de 3](https://www.amazon.fr/Stepper-Controller-Segments-Conducteur-imprimante/dp/B07D6L9FM1) ou [Twotrees lot de 3](https://www.amazon.fr/Twotrees-pilotes-hybride-imprimante-Arduino/dp/B07SSW51GK) | prendre 3 lots (9 drivers, 2 de rechange) |
+| 1 | Arduino Mega 2560 CH340 + câble USB | [Hailege Mega2560](https://www.amazon.fr/Mega2560-ATMEGA16U2-d%C3%A9veloppement-microcontr%C3%B4leur-compatible/dp/B07XD3C824), [Elegoo Mega R3](https://www.amazon.fr/Elegoo-Carte-ATmega2560-ATMEGA-Arduino/dp/B06XKZY117) | format standard, pas la « Mega Pro » |
+| 1 | Shield bornier à vis Mega | [Chesoon pré-soudé](https://www.amazon.fr/Chesoon-Blindage-Bornier-Prototype-MEGA-2560/dp/B099Z37J3H), [WINGONEER (à souder)](https://www.amazon.fr/WINGONEER-Prototype-Terminal-Shield-Arduino/dp/B01N2N7LZA) ≈ 14 € | |
+| 1 | Servo MG996R | [OreluxTEC lot de 2, 180°](https://www.amazon.fr/OreluxTEC-engrenage-MG996R-Digital-Torque/dp/B0BTK414XC) | éviter les versions 270° / 360° |
+| 1 | LM2596 avec afficheur | [AZ-Delivery](https://www.amazon.fr/AZ-Delivery-Convertisseur-Abaisseur-Affichage-num%C3%A9rique/dp/B0D2LD2X38) | |
+| 1 | Embase C14 interrupteur + fusible | [MWMS 10 A](https://www.amazon.fr/MWMS-Connecteur-appareils-interrupteur-fusible/dp/B0C8BT654X) | |
+| 1 | Arrêt d'urgence 22 mm NF + boîtier | [Taiss LA38A-02ZS-BOX](https://www.amazon.fr/Taiss-Champignon-Commutateur-Interrupteur-LA38A-02ZS-BOX/dp/B08P1Q56W5) | déjà en ta possession |
+| 1 | Courroie T5 16 mm ≈ 420 mm (coude) | [16 T5 420 polyuréthane](https://www.amazon.fr/Courroie-dent%C3%A9e-polyur%C3%A9thane-16-420/dp/B06X9YXN4R) | |
+| 2+1 | Courroies T5 16 mm ≈ 460 mm et ≈ 285 mm | non trouvées en fermé 16 mm | RS / Klium (voir plus haut). **Ne pas prendre de HTD 5M** : même pas, dents différentes |
+| 4 | Poulie T5 14 dents alésage 8 | [WEYENY T5-14T lot de 2](https://www.amazon.fr/WEYENY-poulies-courroie-distribution-synchrone/dp/B0CG5MTBRY) | choisir alésage 8 mm, largeur 16 mm |
+| 1 lot | Roulements 608ZZ | [lot de 20](https://www.amazon.fr/Lot-20-roulements-billes-608/dp/B08Q3HM66M) ou [lot de 50 ≈ 17 €](https://www.amazon.fr/Cerkkapo-Lot-roulements-billes-608/dp/B0DS9B74W6) | |
+| 1 lot | Roulements 623ZZ | [XSHAO lot de 30 ≈ 14 €](https://www.amazon.fr/Roulement-Roulements-Miniature-Imprimantes-Quadricopt%C3%A8res/dp/B0F1F319XB) | |
+| 4 | Butée AXK2542 + rondelles AS2542 | [sourcing map AXK2542+2AS](https://www.amazon.fr/sourcing-map-AXK2542-Aiguille-Rondelle/dp/B07JDD6W1H) | rondelles incluses |
+| 1 | Coffret vis M3 DIN912 + écrous + rondelles | [633 pièces M3/M4](https://www.amazon.fr/Boulons-Cylindrique-Assortiment-Rondelles-Hexagonale/dp/B0DQD63QHZ) | ajouter des écrous nylstop M3 |
+| 1 | Pince à sertir + embouts | [kit 1200 embouts](https://www.amazon.fr/Ensemble-25-10-mm2-Auto-r%C3%A9glable-Embouts-c%C3%A2blage-conducteurs/dp/B07DG343YP) | |
+| 10 m | Câble 4 × 0,5 mm² | [multiconducteur au choix](https://www.amazon.fr/C%C3%A2ble-multiconducteur-lautomobile-remorque-choix/dp/B00J232FQI) | choisir 4 × 0,5 mm² |
