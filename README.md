@@ -60,6 +60,8 @@ Options utiles :
 
 Voir [CABLAGE.md](CABLAGE.md) et le [schéma électrique](docs/schema_electrique.pdf).
 
+Pièces à acheter (non imprimables) : [LISTE_ACHATS.md](LISTE_ACHATS.md).
+
 ## Firmware
 
 L'interface fonctionne avec le firmware d'origine `FirmwareArduinoV2_010.ino`.
