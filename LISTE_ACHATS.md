@@ -97,3 +97,31 @@ avant de commander.** Les tendeurs du bras rattrapent un petit écart.
 Pistes pour payer moins : drivers TB6600, Arduino, LM2596, servo, roulements et visserie sont en général
 2 à 3 fois moins chers sur AliExpress (délai 2 à 4 semaines, prix non vérifiés ici). Les courroies T5 fermées
 existent aussi sur AliExpress à quelques euros, mais vérifier qu'elles sont **à câbles acier** et au bon profil.
+
+## Recherches Joybuy (liens prêts à ouvrir)
+
+Joybuy n'a pas pu être consulté automatiquement (site protégé contre les robots) : ces liens ouvrent
+directement la recherche sur joybuy.fr. Comparer avec les prix de référence ci-dessus et vérifier la référence exacte.
+
+| Pièce | Recherche Joybuy |
+|---|---|
+| Drivers TB6600 (×7) | [TB6600](https://www.joybuy.fr/s?keyword=TB6600) |
+| Moteur NEMA 23 2,4 Nm 1,8 A (×2, épaule) | [23HS41-1804S](https://www.joybuy.fr/s?keyword=23HS41-1804S) |
+| NEMA 17 réducteur planétaire 5:1 (coude, avant-bras) | [nema 17 planetary gearbox 5:1](https://www.joybuy.fr/s?keyword=nema%2017%20planetary%20gearbox%205%3A1) |
+| NEMA 14 réducteur 5:1 (poignet) | [nema 14 planetary gearbox](https://www.joybuy.fr/s?keyword=nema%2014%20planetary%20gearbox) |
+| NEMA 14 0,8 A (rotation pince) | [14HS13-0804S](https://www.joybuy.fr/s?keyword=14HS13-0804S) |
+| Arduino Mega 2560 | [Arduino Mega 2560](https://www.joybuy.fr/s?keyword=Arduino%20Mega%202560) |
+| Shield bornier Mega | [Mega 2560 screw terminal shield](https://www.joybuy.fr/s?keyword=Mega%202560%20screw%20terminal%20shield) |
+| Servo MG996R | [MG996R](https://www.joybuy.fr/s?keyword=MG996R) |
+| Convertisseur LM2596 avec afficheur | [LM2596](https://www.joybuy.fr/s?keyword=LM2596) |
+| Embase C14 interrupteur fusible | [C14 interrupteur fusible](https://www.joybuy.fr/s?keyword=C14%20interrupteur%20fusible) |
+| Arrêt d'urgence 22 mm | [bouton arrêt d'urgence 22mm](https://www.joybuy.fr/s?keyword=bouton%20arr%C3%AAt%20d%27urgence%2022mm) |
+| Courroie T5 16 mm fermée | [courroie T5 16mm](https://www.joybuy.fr/s?keyword=courroie%20T5%2016mm) |
+| Poulie T5 14 dents alésage 8 | [poulie T5 14 dents](https://www.joybuy.fr/s?keyword=poulie%20T5%2014%20dents) |
+| Roulements 608ZZ | [608ZZ](https://www.joybuy.fr/s?keyword=608ZZ) |
+| Roulements 623ZZ | [623ZZ](https://www.joybuy.fr/s?keyword=623ZZ) |
+| Butée à aiguilles AXK2542 | [AXK2542](https://www.joybuy.fr/s?keyword=AXK2542) |
+| Coffret vis M3 BTR | [assortiment vis M3](https://www.joybuy.fr/s?keyword=assortiment%20vis%20M3) |
+| Tige filetée M6 | [tige filetée M6](https://www.joybuy.fr/s?keyword=tige%20filet%C3%A9e%20M6) |
+| Embouts de câblage + pince | [embouts de câblage pince à sertir](https://www.joybuy.fr/s?keyword=embouts%20de%20c%C3%A2blage%20pince%20%C3%A0%20sertir) |
+| Câble 4 × 0,5 mm² | [câble 4x0.5mm2](https://www.joybuy.fr/s?keyword=c%C3%A2ble%204x0.5mm2) |
