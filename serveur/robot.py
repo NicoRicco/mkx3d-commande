@@ -33,6 +33,7 @@ class Robot:
         self._pos_recue = None
         self.lecture = None  # tâche de lecture de trajectoire
         self.lecture_info = None
+        self.fin_lecture = None  # résultat de la dernière trajectoire : ok, erreur, arret
         self.journal = []
         self.derniere_connue = self._charger_derniere_position()
 
@@ -244,6 +245,7 @@ class Robot:
             raise ErreurCommande("Trajectoire vide.")
         for p in points:
             self._verifier(p["q"])
+        self.fin_lecture = None
         self.lecture = asyncio.ensure_future(self._lire(points, boucle))
 
     async def _lire(self, points, boucle):
@@ -261,9 +263,12 @@ class Robot:
                         await asyncio.sleep(float(p["pause"]))
                 if not boucle:
                     break
+            self.fin_lecture = "ok"
         except ErreurCommande as e:
+            self.fin_lecture = "erreur"
             self._log("erreur", f"Trajectoire interrompue : {e}")
         except asyncio.CancelledError:
+            self.fin_lecture = "arret"
             self._log("info", "Trajectoire arrêtée.")
         finally:
             self.lecture = None

@@ -47,6 +47,7 @@ Options utiles :
 | `--serie COM3` (ou `/dev/ttyACM0`, `simulateur`) | se connecter automatiquement au démarrage |
 | `--port-web 8080` | port de l'interface web |
 | `--hote 127.0.0.1` | n'accepter que le PC lui-même (pas le réseau) |
+| `--modbus 502` | port Modbus TCP pour un automate (`0` pour désactiver) |
 
 ## Première utilisation avec le bras
 
@@ -59,6 +60,11 @@ Options utiles :
 ## Câblage
 
 Voir [CABLAGE.md](CABLAGE.md) et le [schéma électrique](docs/schema_electrique.pdf).
+
+## Automate (Modicon M340)
+
+Un automate peut lancer les trajectoires, commander la pince et lire l'état du robot en **Modbus TCP**
+(port 502, actif par défaut). Table d'échange et exemple de programme : [docs/AUTOMATE_M340.md](docs/AUTOMATE_M340.md).
 
 ## Firmware
 

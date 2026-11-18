@@ -2,6 +2,7 @@
 
 Lancement :  python serveur/app.py            (puis ouvrir http://localhost:8080)
 Options   :  --port-web 8080  --hote 0.0.0.0  --serie COM3 | /dev/ttyACM0 | simulateur
+             --modbus 502 (port Modbus TCP pour un automate, 0 pour désactiver)
 """
 
 import argparse
@@ -14,6 +15,7 @@ from pathlib import Path
 from aiohttp import WSMsgType, web
 
 from liaison import lister_ports
+from modbus import PasserelleAutomate, ServeurModbus
 from robot import ErreurCommande, Robot
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -128,7 +130,26 @@ async def diffusion_periodique(app):
 
 async def a_l_arret(app):
     app["diffusion"].cancel()
+    if app.get("modbus"):
+        app["surveillance"].cancel()
+        await app["modbus"].arreter()
     await robot.deconnecter()
+
+
+async def demarrer_modbus(app):
+    port = app["port_modbus"]
+    if not port:
+        return
+    passerelle = PasserelleAutomate(robot, DOSSIER_TRAJ, robot._log)
+    serveur = ServeurModbus(passerelle)
+    try:
+        await serveur.demarrer(app["hote"], port)
+    except OSError as e:
+        print(f"Serveur Modbus TCP non démarré sur le port {port} : {e}")
+        return
+    app["modbus"] = serveur
+    app["surveillance"] = asyncio.ensure_future(passerelle.surveiller())
+    print(f"Serveur Modbus TCP pour automate : port {port}")
 
 
 async def au_demarrage_serie(app):
@@ -157,11 +178,14 @@ def main():
     p.add_argument("--hote", default="0.0.0.0", help="adresse d'écoute (0.0.0.0 = tout le réseau local)")
     p.add_argument("--port-web", type=int, default=8080)
     p.add_argument("--serie", default=None, help="port série à ouvrir au démarrage, ou 'simulateur'")
+    p.add_argument("--modbus", type=int, default=502, help="port Modbus TCP pour un automate (0 = désactivé)")
     args = p.parse_args()
 
     robot = Robot(diffuser)
     app = web.Application()
     app["serie"] = args.serie
+    app["hote"] = args.hote
+    app["port_modbus"] = args.modbus
     app.router.add_get("/", index)
     app.router.add_get("/ws", route_ws)
     app.router.add_get("/api/trajectoires", liste_traj)
@@ -171,6 +195,7 @@ def main():
     app.router.add_static("/", DOSSIER_WEB)
     app.on_startup.append(diffusion_periodique)
     app.on_startup.append(au_demarrage_serie)
+    app.on_startup.append(demarrer_modbus)
     app.on_cleanup.append(a_l_arret)
 
     ip = adresses_locales()
